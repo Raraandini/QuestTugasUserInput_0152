@@ -120,6 +120,12 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
                 .fillMaxHeight(0.38f),
             contentAlignment = Alignment.Center,
         ) {
+            Image(
+                painter = painterResource(id = R.drawable.bg_image),
+                contentDescription = stringResource(id = R.string.desc_bg),
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop,
+            )
         }
     }
 }

@@ -182,6 +182,18 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
                     )
                 }
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_medium)))
+
+                OutlinedTextField(
+                    value = textEmail,
+                    onValueChange = { textEmail = it },
+                    label = { Text(stringResource(id = R.string.hint_email)) },
+                    modifier = Modifier.fillMaxWidth(),
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Email,
+                        imeAction = ImeAction.Done,
+                    ),
+                )
+                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_medium)))
             }
         }
     }

@@ -114,5 +114,12 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
                 })
             },
     ) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight(0.38f),
+            contentAlignment = Alignment.Center,
+        ) {
+        }
     }
 }

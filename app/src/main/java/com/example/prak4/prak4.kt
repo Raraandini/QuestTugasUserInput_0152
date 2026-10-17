@@ -214,6 +214,32 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
                         )
                         Box(modifier = Modifier.matchParentSize().clickable { showDatePicker = true })
                     }
+                    ExposedDropdownMenuBox(
+                        expanded = expandedExperience,
+                        onExpandedChange = { expandedExperience = !expandedExperience },
+                        modifier = Modifier.weight(1f),
+                    ) {
+                        OutlinedTextField(
+                            value = textExperience,
+                            onValueChange = {},
+                            readOnly = true,
+                            label = { Text(stringResource(id = R.string.hint_experience)) },
+                            modifier = Modifier.menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable, true).fillMaxWidth(),
+                            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expandedExperience) },
+                            colors = ExposedDropdownMenuDefaults.outlinedTextFieldColors(),
+                        )
+                        ExposedDropdownMenu(
+                            expanded = expandedExperience,
+                            onDismissRequest = { expandedExperience = false },
+                        ) {
+                            experienceOptions.forEach { option ->
+                                DropdownMenuItem(
+                                    text = { Text(option) },
+                                    onClick = { textExperience = option; expandedExperience = false },
+                                )
+                            }
+                        }
+                    }
 
                 }
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_large)))

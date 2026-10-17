@@ -194,6 +194,14 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
                     ),
                 )
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_medium)))
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium)),
+                ) {
+            
+                }
+                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_large)))
             }
         }
     }

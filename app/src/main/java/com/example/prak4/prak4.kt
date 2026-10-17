@@ -199,7 +199,22 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium)),
                 ) {
-            
+                    Box(modifier = Modifier.weight(1f)) {
+                        OutlinedTextField(
+                            value = textTglLahir,
+                            onValueChange = {},
+                            readOnly = true,
+                            label = { Text(stringResource(id = R.string.hint_tgl_lahir)) },
+                            modifier = Modifier.fillMaxWidth(),
+                            trailingIcon = {
+                                IconButton(onClick = { showDatePicker = true }) {
+                                    Icon(Icons.Default.DateRange, contentDescription = null)
+                                }
+                            },
+                        )
+                        Box(modifier = Modifier.matchParentSize().clickable { showDatePicker = true })
+                    }
+
                 }
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_large)))
             }

@@ -136,5 +136,18 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
                 modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.padding_large)),
             )
         }
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight(0.70f)
+                .align(Alignment.BottomCenter)
+                .clip(RoundedCornerShape(
+                    topStart = dimensionResource(id = R.dimen.corner_radius_box),
+                    topEnd = dimensionResource(id = R.dimen.corner_radius_box),
+                ))
+                .background(colorResource(id = R.color.white_background))
+                .padding(dimensionResource(id = R.dimen.padding_large))
+        ) {
+        }
     }
 }

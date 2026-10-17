@@ -81,4 +81,27 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
     var checkAndroid by remember { mutableStateOf(false) }
     var checkUiUx by remember { mutableStateOf(false) }
     var checkWeb by remember { mutableStateOf(false) }
+
+    if (showDatePicker) {
+        DatePickerDialog(
+            onDismissRequest = { showDatePicker = false },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        datePickerState.selectedDateMillis?.let { millis ->
+                            val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+                            sdf.timeZone = TimeZone.getTimeZone("UTC")
+                            textTglLahir = sdf.format(Date(millis))
+                        }
+                        showDatePicker = false
+                    },
+                ) { Text("OK") }
+            },
+            dismissButton = {
+                TextButton(onClick = { showDatePicker = false }) { Text("Batal") }
+            },
+        ) {
+            DatePicker(state = datePickerState)
+        }
+    }
 }

@@ -161,6 +161,27 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
                     textAlign = TextAlign.Center,
                 )
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_large)))
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium)),
+                ) {
+                    OutlinedTextField(
+                        value = textNamaDepan,
+                        onValueChange = { textNamaDepan = it },
+                        label = { Text(stringResource(id = R.string.hint_nama_depan)) },
+                        modifier = Modifier.weight(1f),
+                        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Next),
+                    )
+                    OutlinedTextField(
+                        value = textNamaBelakang,
+                        onValueChange = { textNamaBelakang = it },
+                        label = { Text(stringResource(id = R.string.hint_nama_belakang)) },
+                        modifier = Modifier.weight(1f),
+                        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Next),
+                    )
+                }
+                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_medium)))
             }
         }
     }

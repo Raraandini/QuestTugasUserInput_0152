@@ -74,4 +74,6 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
     var textEmail by remember { mutableStateOf("") }
     var textExperience by remember { mutableStateOf("") }
     var textTglLahir by remember { mutableStateOf("") }
+    var showDatePicker by remember { mutableStateOf(false) }
+    val datePickerState = rememberDatePickerState()
 }

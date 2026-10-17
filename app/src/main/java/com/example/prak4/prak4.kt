@@ -104,4 +104,15 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
             DatePicker(state = datePickerState)
         }
     }
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .pointerInput(Unit) {
+                detectTapGestures(onTap = {
+                    focusManager.clearFocus()
+                    keyboardController?.hide()
+                })
+            },
+    ) {
+    }
 }

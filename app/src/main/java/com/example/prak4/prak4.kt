@@ -148,6 +148,13 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
                 .background(colorResource(id = R.color.white_background))
                 .padding(dimensionResource(id = R.dimen.padding_large))
         ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState()),
+                horizontalAlignment = Alignment.CenterHorizontally,
+            ) {
+            }
         }
     }
 }

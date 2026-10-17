@@ -240,6 +240,35 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
                             }
                         }
                     }
+                    Text(text = stringResource(id = R.string.title_skill), fontWeight = FontWeight.Bold)
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(checked = checkAndroid, onCheckedChange = { checkAndroid = it })
+                            Text("Android")
+                        }
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(checked = checkUiUx, onCheckedChange = { checkUiUx = it })
+                            Text("UI/UX")
+                        }
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Checkbox(checked = checkWeb, onCheckedChange = { checkWeb = it })
+                            Text("Web")
+                        }
+                    }
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_large)))
+
+                    Button(
+                        onClick = {
+                            focusManager.clearFocus()
+                            keyboardController?.hide()
+                        },
+                        modifier = Modifier.fillMaxWidth().height(dimensionResource(id = R.dimen.button_height)),
+                    ) {
+                        Text(text = stringResource(id = R.string.btn_proceed))
+                    }
 
                 }
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_large)))

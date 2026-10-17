@@ -69,4 +69,9 @@ import java.util.TimeZone
 fun BiodataScreen(modifier: Modifier = Modifier) {
     val focusManager = LocalFocusManager.current
     val keyboardController = LocalSoftwareKeyboardController.current
+    var textNamaDepan by remember { mutableStateOf("") }
+    var textNamaBelakang by remember { mutableStateOf("") }
+    var textEmail by remember { mutableStateOf("") }
+    var textExperience by remember { mutableStateOf("") }
+    var textTglLahir by remember { mutableStateOf("") }
 }

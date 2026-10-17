@@ -3,4 +3,9 @@
     <string name="header_title">Biodata Mahasiswa\nTeknolgi Informasi</string>
     <string name="form_title">Form Biodata</string>
     <string name="form_subtitle">Silahkan isi biodata Anda dibawah ini !!!</string>
+    <string name="hint_nama_depan">Nama Depan</string>
+    <string name="hint_nama_belakang">Nama Belakang</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_tgl_lahir">Tgl Lahir</string>
+    <string name="hint_experience">Experience</string>
 </resources>

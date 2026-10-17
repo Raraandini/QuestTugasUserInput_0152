@@ -126,6 +126,15 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
                 modifier = Modifier.fillMaxSize(),
                 contentScale = ContentScale.Crop,
             )
+            Text(
+                text = stringResource(id = R.string.header_title),
+                fontSize = 26.sp,
+                fontWeight = FontWeight.Bold,
+                color = colorResource(id = R.color.header_text_color),
+                textAlign = TextAlign.Center,
+                lineHeight = 34.sp,
+                modifier = Modifier.padding(horizontal = dimensionResource(id = R.dimen.padding_large)),
+            )
         }
     }
 }

@@ -13,5 +13,7 @@
     <string name="skill_uiux">UI/UX</string>
     <string name="skill_web">Web</string>
     <string name="btn_proceed">Proceed</string>
-
+    <string name="desc_bg">Background Laba Laba Neon</string>
+    <string name="desc_calendar">Ikon Kalender</string>
+    <string name="desc_dropdown">Ikon Dropdown</string>
 </resources>

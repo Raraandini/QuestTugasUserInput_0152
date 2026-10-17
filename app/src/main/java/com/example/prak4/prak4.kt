@@ -154,6 +154,13 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
                     .verticalScroll(rememberScrollState()),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
+                Text(
+                    text = stringResource(id = R.string.form_subtitle),
+                    fontSize = dimensionResource(id = R.dimen.text_subtitle).value.sp,
+                    color = colorResource(id = R.color.gray_subtitle),
+                    textAlign = TextAlign.Center,
+                )
+                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.padding_large)))
             }
         }
     }

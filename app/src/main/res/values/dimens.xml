@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+
+    <dimen name="corner_radius_box">32dp</dimen>
+    <dimen name="corner_radius_textfield">16dp</dimen>
+
+    <dimen name="text_title">28sp</dimen>
+    <dimen name="text_subtitle">14sp</dimen>
+    <dimen name="text_normal">16sp</dimen>
+
+    <dimen name="button_height">50dp</dimen>
+</resources>

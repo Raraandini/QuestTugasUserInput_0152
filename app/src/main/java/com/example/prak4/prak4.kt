@@ -76,4 +76,6 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
     var textTglLahir by remember { mutableStateOf("") }
     var showDatePicker by remember { mutableStateOf(false) }
     val datePickerState = rememberDatePickerState()
+    var expandedExperience by remember { mutableStateOf(false) }
+    val experienceOptions = listOf("< 1 Tahun", "1 - 2 Tahun", "3 - 5 Tahun", "> 5 Tahun")
 }

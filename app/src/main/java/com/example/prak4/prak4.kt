@@ -78,4 +78,7 @@ fun BiodataScreen(modifier: Modifier = Modifier) {
     val datePickerState = rememberDatePickerState()
     var expandedExperience by remember { mutableStateOf(false) }
     val experienceOptions = listOf("< 1 Tahun", "1 - 2 Tahun", "3 - 5 Tahun", "> 5 Tahun")
+    var checkAndroid by remember { mutableStateOf(false) }
+    var checkUiUx by remember { mutableStateOf(false) }
+    var checkWeb by remember { mutableStateOf(false) }
 }
